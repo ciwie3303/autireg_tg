@@ -16,12 +16,12 @@ async def get_countries(api_key: str):
                 return None
 
             countries_rus = {}
-            print("Список стран:")
+  
             for country_id, country_info in countries_data.items():
                 if 'rus' in country_info:
                     country_name = country_info['rus']
                     countries_rus[country_id] = (country_name, country_id) 
-                    print(f"ID: {country_id} | {country_name}")  
+                    # print(f"ID: {country_id} | {country_name}")  
             
             return countries_rus
 
